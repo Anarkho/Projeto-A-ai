@@ -5,7 +5,7 @@ import Cabecalho from './components/cabecalho'
 function App() {
   return (
     <div className="App">
-      <Cabecalho></Cabecalho>
+      <Cabecalho/>
       <MenuPedido/>
     </div>
   );
