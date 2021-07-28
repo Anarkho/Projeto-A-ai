@@ -1,12 +1,13 @@
 import React from 'react'
 import { BtnRecheio, Container } from './styles'
-import './comportamento.scss'
+import './recheio.scss'
 
 
 const PainelRecheio = () => {
     return (
-        <Container className='container'>
-            <BtnRecheio className='morango'>
+        <Container style={{display: ''}} className='container'>
+            <BtnRecheio className='morango'
+            onClick={()=>{}}>
                 MORANGO
             </BtnRecheio>
             <BtnRecheio className='banana'>

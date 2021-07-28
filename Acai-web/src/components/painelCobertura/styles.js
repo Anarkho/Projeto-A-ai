@@ -1,14 +1,16 @@
 import styled from 'styled-components'
 
+
 export const Container = styled.div`
 display: flex;
 height: 100%;
 justify-content: space-around;
 align-items: center;
 width: 100vw;
+flex-wrap: wrap;
 `
 
-export const BtnRecheio = styled.button`
+export const BtnTamanho = styled.button`
   opacity: 0.5;
   height: 50%;
   font-size: 2rem;
@@ -17,21 +19,21 @@ export const BtnRecheio = styled.button`
   letter-spacing: 8px;
   width: 27%;
   background-color: white;
-  color: black;
+  color:black ;
   border-radius: 50%;
   border: 0;
-  background-image: url("https://hiperideal.vteximg.com.br/arquivos/ids/167649-1000-1000/17523.jpg?v=636615816105370000");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center ;
-  
-  &.morango{
-      background-image: url("https://organicossaocarlos.com.br/wp-content/uploads/2019/07/morango.jpg");
+  background-image: url('https://i.ibb.co/7XnsdhN/leiteninho.jpg');
+
+  &.granola{
+      background-image: url("https://i.ibb.co/fFvW1xk/granola.jpg");
   };
-  &.banana{
-      background-image: url("https://arcomixstr.blob.core.windows.net/product/5985-banana-granayne-kg-g.jpg");
+  &.pacoca{
+      background-image: url("https://i.ibb.co/2sgSYFN/pacoca.jpg");
   };
-  &.kiwi{
+  &.leiteNinho{
       background-image: url("https://hiperideal.vteximg.com.br/arquivos/ids/167649-1000-1000/17523.jpg?v=636615816105370000");
   }
 
@@ -41,5 +43,5 @@ export const BtnRecheio = styled.button`
       transform: scale(1.2);
   }
 
-`
 
+`
