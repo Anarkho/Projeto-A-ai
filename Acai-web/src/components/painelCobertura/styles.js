@@ -10,7 +10,7 @@ width: 100vw;
 flex-wrap: wrap;
 `
 
-export const BtnTamanho = styled.button`
+export const BtnCobertura = styled.button`
   opacity: 0.5;
   height: 50%;
   font-size: 2rem;

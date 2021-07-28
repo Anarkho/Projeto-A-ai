@@ -1,20 +1,20 @@
 import React from 'react'
-import { BtnTamanho, Container } from './styles'
+import { BtnCobertura, Container } from './styles'
 import './cobertura.scss'
 
 
 const PainelCobertura = () => {
     return (
         <Container style={{display:'none'}} className='container'>
-            <BtnTamanho className='granola'>
+            <BtnCobertura className='granola'>
                 GRANOLA
-            </BtnTamanho>
-            <BtnTamanho className='pacoca'>
+            </BtnCobertura>
+            <BtnCobertura className='pacoca'>
                 PAÇOCA
-            </BtnTamanho>
-            <BtnTamanho classname='leiteNinho'>
+            </BtnCobertura>
+            <BtnCobertura classname='leiteNinho'>
                 LEITE NINHO
-            </BtnTamanho>
+            </BtnCobertura>
 
         </Container>
     )
