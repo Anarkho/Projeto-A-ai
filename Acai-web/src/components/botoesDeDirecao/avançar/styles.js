@@ -24,4 +24,7 @@ export const BtnAvanca = styled.button`
     :hover{
         background-color: rgb(240,100,60);
     }
+    :active{
+        background-color: black;
+    }
 `
