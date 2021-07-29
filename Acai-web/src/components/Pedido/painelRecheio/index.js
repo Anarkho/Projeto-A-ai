@@ -5,7 +5,7 @@ import './recheio.scss'
 
 const PainelRecheio = () => {
     return (
-        <Container style={{display: ''}} className='container'>
+        <Container style={{display: 'none'}} className='container'>
             <BtnRecheio className='morango'
             onClick={()=>{}}>
                 MORANGO

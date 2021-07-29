@@ -2,7 +2,6 @@ import React from 'react'
 import { BtnCobertura, Container } from './styles'
 import './cobertura.scss'
 
-
 const PainelCobertura = () => {
     return (
         <Container style={{display:'none'}} className='container'>

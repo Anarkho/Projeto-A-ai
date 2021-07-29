@@ -1,21 +1,29 @@
 import React from 'react'
-import BotaoAvancar from '../../components/botoesDeDirecao/avançar/index.js'
-import { BtnAvanca } from '../../components/botoesDeDirecao/avançar/styles.js'
-import BotaoRetornar from '../../components/botoesDeDirecao/retornar/index.js'
-import PainelCobertura from '../../components/painelCobertura/index.js'
-import PainelRecheio from '../../components/painelRecheio/index.js'
-import PainelTamanho from '../../components/painelTamanho/index.js'
-import {Container} from './styles.js'
+
+import BotaoAvancar from '../../components/Pedido/botoesDeDirecao/avançar'
+import BotaoRetornar from '../../components/Pedido/botoesDeDirecao/retornar'
+import PainelCobertura from '../../components/Pedido/painelCobertura'
+import PainelRecheio from '../../components/Pedido/painelRecheio'
+import PainelTamanho from '../../components/Pedido/painelTamanho'
+import Cabecalho from '../../components/Pedido/cabecalho'
+import DetalhesPedido from '../../components/Pedido/painelDetalhes'
+import { Container } from './styles.js'
+import BotaoAlterar from '../../components/Pedido/botoesStatusPedido/alterar'
+import BotaoFinalizar from '../../components/Pedido/botoesStatusPedido/finalizar'
 
 const MenuPedido = () => {
 
-    return(
+    return (
         <Container>
-           <PainelRecheio/>
-           <PainelTamanho/>
-           <PainelCobertura/>
-           <BotaoAvancar/>
-           <BotaoRetornar/>
+            <Cabecalho />
+            <PainelRecheio />
+            <PainelTamanho />
+            <PainelCobertura />
+            <BotaoAvancar/>
+            <BotaoRetornar />
+            <DetalhesPedido/>
+            <BotaoAlterar/>
+            <BotaoFinalizar/>
         </Container>
     )
 }

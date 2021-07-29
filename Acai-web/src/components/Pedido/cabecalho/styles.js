@@ -9,6 +9,6 @@ export const Container = styled.div`
 export const Titulo = styled.h1`
     color: white;
 `
-export const Escolha = styled. h2`
+export const Escolha = styled.h2`
     color: black;
 `
