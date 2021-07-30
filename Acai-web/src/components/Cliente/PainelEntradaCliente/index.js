@@ -26,12 +26,9 @@ const PainelEntradaCliente = () => {
             <InputNumero maxLength='11' />
             </div>
             
-
             <ContainerButton>
                 <BtnPedir>FAZER PEDIDO</BtnPedir>
             </ContainerButton>
-
-
 
         </Container>
     )
