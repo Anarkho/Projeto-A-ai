@@ -4,7 +4,7 @@ import { Container } from './styles'
 
 const MenuCliente = () => {
     return(
-        <Container style={{display: ''}}>
+        <Container style={{display: 'none'}}>
             <PainelEntradaCliente/>
         </Container>
     )

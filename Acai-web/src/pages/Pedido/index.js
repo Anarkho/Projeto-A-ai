@@ -24,6 +24,7 @@ const MenuPedido = () => {
             <DetalhesPedido/>
             <BotaoAlterar/>
             <BotaoFinalizar/>
+            
         </Container>
     )
 }

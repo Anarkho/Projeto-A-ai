@@ -5,7 +5,7 @@ import './detalhes.scss'
 const PainelDetalhes = () => {
 
     return (
-        <Container style={{display: ''}} className='container'>
+        <Container style={{display: 'none'}} className='container'>
             <span><Text>Recheio: </Text>
                 <Selecao disabled id="recheio">
                     <Opcao value="morango"> MORANGO</Opcao>
