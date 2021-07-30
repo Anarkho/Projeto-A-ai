@@ -7,8 +7,7 @@ export const Container = styled.div`
     left: 17%;
     align-items: center;
     justify-content: center;
-    
-
+    bottom: 5%;
 `
 
 export const BtnRetorne = styled.button`
