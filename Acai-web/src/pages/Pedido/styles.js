@@ -9,4 +9,12 @@ export const Container = styled.div`
  border-radius: 15px;
  background-color: white;
  justify-content: center;
+
+ @media (max-width: 700px ) {
+    div{
+     font-size: small;
+
+    } 
+ }
 `
+

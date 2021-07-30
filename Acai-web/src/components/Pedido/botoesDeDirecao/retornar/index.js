@@ -3,7 +3,7 @@ import { Container,BtnRetorne } from './styles'
 
 const BotaoRetornar = () => {
     return(
-        <Container style={{display:''}}>
+        <Container style={{display:'none'}}>
             <BtnRetorne>&#10140;</BtnRetorne>
         </Container>
     )

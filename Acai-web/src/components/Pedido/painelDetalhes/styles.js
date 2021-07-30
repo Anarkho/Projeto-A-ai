@@ -7,7 +7,12 @@ export const Container = styled.div`
     width: 100vw;
     justify-content: center;
     align-items: center;
+    
+    @media(max-width: 640px) {
+    width: 50%;
+  }
 `
+
 export const Text = styled.text`
     font-size: 1.2rem;
 `

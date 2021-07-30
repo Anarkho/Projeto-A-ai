@@ -14,7 +14,7 @@ import BotaoFinalizar from '../../components/Pedido/botoesStatusPedido/finalizar
 const MenuPedido = () => {
 
     return (
-        <Container style={{marginRight: '0%', display: 'none'}}>
+        <Container style={{marginRight: '0%', display: ''}}>
             <Cabecalho/>
             <PainelRecheio/>
             <PainelTamanho/>

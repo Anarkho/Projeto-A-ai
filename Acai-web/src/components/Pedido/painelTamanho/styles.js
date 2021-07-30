@@ -8,6 +8,13 @@ justify-content: space-around;
 align-items: center;
 width: 100vw;
 flex-wrap: wrap;
+
+@media(orientation: portrait) {
+    width: 100%;
+    justify-content: space-space-around;
+    flex-direction: column;
+    align-items: center;
+  }
 `
 
 export const BtnTamanho = styled.button`
@@ -19,7 +26,7 @@ export const BtnTamanho = styled.button`
   letter-spacing: 8px;
   width: 27%;
   background-color: white;
-  color:brown ;
+  color:red ;
   border-radius: 50%;
   border: 0;
   background-repeat: no-repeat;
@@ -42,6 +49,16 @@ export const BtnTamanho = styled.button`
       transition-duration: 0.5s;
       transform: scale(1.2);
   }
-
+  
+  @media(orientation: portrait){
+        width: 50px;
+        height: 50px;
+        font-size: 1rem;
+  }
+  @media (max-width: 850px){
+        width: 80px;
+        height: 80px;
+        font-size: 1rem;
+  }
 
 `

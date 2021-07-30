@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import {
     Container,
     TextCliente,
@@ -10,24 +10,33 @@ import {
     ImgCheck
 } from './styles'
 
-const ModalFinalizado = () => {
+
+let resposta = []
+const ModalFinalizado = (props) => {
+    useEffect(() => {
+       
+        
+    })
+    
+
     return (
-        <Container style={{display: ''}}>
+        <Container style={{ display: 'none' }} className='container'>
             <span>
                 <h1>Pedido Finalizado</h1>
-                 <ImgCheck src='https://i.ibb.co/N6QVFtx/check.png' alt='check'/> 
+                <ImgCheck src='https://i.ibb.co/N6QVFtx/check.png' alt='check' />
             </span>
-            <TextCliente><b>Nome do cliente:</b> Alex Soares Fernandes</TextCliente>
-            <TextNumero><b>Telefone:</b> 43 9 8453-2406</TextNumero>
+            <TextCliente><b>Nome do cliente:</b> {} </TextCliente>
+            <TextNumero><b>Telefone:</b> {} </TextNumero>
 
-            <TextRecheio><b>Recheio escolhido:</b> MORANGO </TextRecheio>
-            <TextTamanho><b>Tamanho escolhido:</b> MEDIO 500ml </TextTamanho>
-            <TextCobertura><b>Cobertura escolhida:</b> LEITE NINHO</TextCobertura>
+            <TextRecheio><b>Recheio escolhido:</b> {} </TextRecheio>
+            <TextTamanho><b>Tamanho escolhido:</b> {} </TextTamanho>
+            <TextCobertura><b>Cobertura escolhida:</b> {}</TextCobertura>
 
-            <TextPreco>Total a pagar: R$ 4,55 </TextPreco>
+            <TextPreco>Total a pagar: {} </TextPreco>
 
         </Container>
-            )
+    )
 }
+
 
 export default ModalFinalizado

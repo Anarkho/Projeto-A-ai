@@ -4,7 +4,7 @@ import './cobertura.scss'
 
 const PainelCobertura = () => {
     return (
-        <Container style={{display:'none'}} className='container'>
+        <Container style={{display:''}} className='container'>
             <BtnCobertura className='granola'>
                 GRANOLA
             </BtnCobertura>

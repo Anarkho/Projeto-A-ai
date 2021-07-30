@@ -3,7 +3,7 @@ import { BtnFinalizar, Container } from './styles'
 
 const BotaoFinalizar = () => {
     return(
-        <Container>
+        <Container style={{display: 'none'}}>
             <BtnFinalizar>FINALIZAR</BtnFinalizar>
         </Container>
     )

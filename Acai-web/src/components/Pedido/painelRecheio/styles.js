@@ -6,6 +6,14 @@ height: 100%;
 justify-content: space-around;
 align-items: center;
 width: 100vw;
+
+@media(orientation: portrait) {
+    width: 100%;
+    justify-content: space-space-around;
+    flex-direction: column;
+    align-items: center;
+  }
+
 `
 
 export const BtnRecheio = styled.button`
@@ -39,6 +47,17 @@ export const BtnRecheio = styled.button`
       opacity: 1;
       transition-duration: 0.5s;
       transform: scale(1.2);
+  }
+
+  @media(orientation: portrait){
+        width: 50px;
+        height: 50px;
+        font-size: 1rem;
+  }
+  @media (max-width: 850px){
+        width: 80px;
+        height: 80px;
+        font-size: 1rem;
   }
 
 `

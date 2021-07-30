@@ -4,7 +4,7 @@ import $ from 'jquery'
 
 const BotaoAlterar = () => {
     return (
-        <Container>
+        <Container style={{display: 'none'}}>
             <BtnAlterar
                 onClick={() => $('select').prop('disabled', false)}>
                 ALTERAR

@@ -13,7 +13,7 @@ import {
 
 const PainelEntradaCliente = () => {
     return (
-        <Container style={{display: 'none'}}>
+        <Container style={{display: ''}}>
             
             <TextTitulo>Cliente</TextTitulo>
             <TextSubtitulo>Entre com seus dados</TextSubtitulo>
