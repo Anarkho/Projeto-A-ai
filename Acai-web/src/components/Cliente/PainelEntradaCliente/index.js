@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { displayContext } from '../../../App'
 import {
     BtnPedir,
     Container,
@@ -11,23 +12,33 @@ import {
     TextTitulo
 } from './styles'
 
+
 const PainelEntradaCliente = () => {
+    const { display, setdisplay } = useContext(displayContext)
+
     return (
-        <Container style={{display: ''}}>
-            
+        <Container style={{ display: display }}>
+            {/* mesmo que setdisplay((previousState)=>{return previousState}) */}
             <TextTitulo>Cliente</TextTitulo>
             <TextSubtitulo>Entre com seus dados</TextSubtitulo>
-            <div 
-            style={{display: 'flex',flexDirection: 'column',height: '100%', alignItems: 'center', marginTop: '7%'}}>
-            <TextNome>Nome</TextNome>
-            <InputNome />
+            <div
+                style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+                <TextNome>Nome</TextNome>
+                <InputNome />
 
-            <TextNumero>Numero</TextNumero>
-            <InputNumero maxLength='11' />
+                <TextNumero>Numero {display}</TextNumero>
+                <InputNumero maxLength='11' />
             </div>
-            
+
             <ContainerButton>
-                <BtnPedir>FAZER PEDIDO</BtnPedir>
+                <BtnPedir onClick={() => {
+                    setdisplay({
+                        type: 'ESCONDER_DISPLAY_ENTRADA_CLIENTE',
+                        payload: 'none'
+                    })
+                }}>
+                    FAZER PEDIDO
+                </BtnPedir>
             </ContainerButton>
 
         </Container>

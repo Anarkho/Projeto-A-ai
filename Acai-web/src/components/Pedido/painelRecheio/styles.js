@@ -7,13 +7,14 @@ justify-content: space-around;
 align-items: center;
 width: 100vw;
 
+
+
 @media(orientation: portrait) {
     width: 100%;
     justify-content: space-space-around;
     flex-direction: column;
     align-items: center;
-  }
-
+}
 `
 
 export const BtnRecheio = styled.button`

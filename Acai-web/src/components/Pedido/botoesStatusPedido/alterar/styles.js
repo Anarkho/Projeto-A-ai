@@ -23,4 +23,8 @@ export const BtnAlterar = styled.button`
     :active{
         background-color: orangered;
     }
+
+    @media(orientation: portrait){
+       margin-left: -100%;
+    }
 `

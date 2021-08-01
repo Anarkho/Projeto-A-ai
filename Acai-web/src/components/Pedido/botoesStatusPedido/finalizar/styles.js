@@ -23,4 +23,7 @@ export const BtnFinalizar = styled.button`
     :active{
         background-color: forestgreen;
     }
+    @media(orientation: portrait){
+       margin-left: 50%;
+    }
 `

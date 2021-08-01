@@ -14,7 +14,7 @@ import {
 
 
 let resposta = []
-const ModalFinalizado = (props) => {
+const ModalFinalizado = () => {
 
     const [nome, setNome] = useState('')
     const [telefone, setTelefone] = useState('')
@@ -22,28 +22,30 @@ const ModalFinalizado = (props) => {
     const [tamanho, setTamanho] = useState('')
     const [cobertura, setCobertura] = useState('')
     const [preco, setPreco] = useState('')
+    const [displayModal, setdisplayModal] = useState('none')
 
 
     useEffect(() => {
-       listar() 
+       //listar() 
     })
 
     function listar(){
-        http.get('/clientes').then(response => {
-            resposta = response.data[0]
-            setNome(resposta.nome)
-            setTelefone(resposta.telefone)
-            const pedido = resposta.pedidos[0]
-            setRecheio(pedido.recheio)
-            setTamanho(pedido.tamanho)
-            setCobertura(pedido.cobertura)
-            setPreco(pedido.preco)
-        })
+            http.get('/clientes').then(response => {
+                resposta = response.data[0]
+                setNome(resposta.nome)
+                setTelefone(resposta.telefone)
+                const pedido = resposta.pedidos[0]
+                setRecheio(pedido.recheio)
+                setTamanho(pedido.tamanho)
+                setCobertura(pedido.cobertura)
+                setPreco(pedido.preco)
+    
+                setdisplayModal('flex')
+            })
     }
     
-
     return (
-        <Container style={{ display: '' }} className='container'>
+        <Container style={{ display: displayModal }} className='container'>
             <span>
                 <h1>Pedido Finalizado</h1>
                 <ImgCheck src='https://i.ibb.co/N6QVFtx/check.png' alt='check' />
