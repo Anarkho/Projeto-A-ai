@@ -6,15 +6,15 @@ import { displayContext } from '../../App'
 const MenuCliente = () => {
     const { display, setdisplay } = useContext(displayContext) // extracão da propriedade do objeto
 
-    useEffect(()=>{
+    useEffect(() => {
         setdisplay({
             type: 'MOSTRAR_DISPLAY_CLIENTE',
             payload: 'flex'
         })
-    },[])
+    }, [])
 
     return (
-        <Container style={{display: display }}>
+        <Container style={{ display: display.displayCliente }}>
             <PainelEntradaCliente />
         </Container>
     )

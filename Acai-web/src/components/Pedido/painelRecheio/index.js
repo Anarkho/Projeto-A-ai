@@ -1,19 +1,53 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { displayContext } from '../../../App'
 import { BtnRecheio, Container } from './styles'
 import './recheio.scss'
 
 
 const PainelRecheio = () => {
+
+    const { display, setdisplay } = useContext(displayContext)
+
     return (
-        <Container style={{display: 'none'}} className='container'>
+        <Container style={{ display: display.displayR }} className='container'>
             <BtnRecheio className='morango'
-            onClick={()=>{}}>
+                onClick={() => {
+                    setdisplay({
+                        type: 'ESCONDER_DISPLAY_RECHEIO',
+                        payload: 'none',
+                    })
+                    setdisplay({
+                        type: 'MOSTRAR_DISPLAY_TAMANHO',
+                        payload: 'flex'
+                    })
+                   
+                }}>
                 MORANGO
             </BtnRecheio>
-            <BtnRecheio className='banana'>
+            <BtnRecheio className='banana'
+                onClick={() => {
+                    setdisplay({
+                        type: 'ESCONDER_DISPLAY_RECHEIO',
+                        payload: 'none',
+                    })
+                    setdisplay({
+                        type: 'MOSTRAR_DISPLAY_TAMANHO',
+                        payload: 'flex'
+                    })
+                }}>
                 BANANA
             </BtnRecheio>
-            <BtnRecheio classname='kiwi'>
+            <BtnRecheio classname='kiwi'
+                onClick={() => {
+                    setdisplay({
+                        type: 'ESCONDER_DISPLAY_RECHEIO',
+                        payload: 'none',
+                    })
+                    setdisplay({
+                        type: 'MOSTRAR_DISPLAY_TAMANHO',
+                        payload: 'flex'
+                    })
+                }}>
                 KIWI
             </BtnRecheio>
 

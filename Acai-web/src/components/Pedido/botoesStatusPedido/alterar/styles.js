@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
+    display: none;
     width: max-content;
     align-items: flex-start;
     border-radius: 5px;

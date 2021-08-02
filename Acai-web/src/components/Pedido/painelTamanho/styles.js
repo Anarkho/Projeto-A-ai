@@ -1,17 +1,15 @@
 import styled from 'styled-components'
 
-
 export const Container = styled.div`
-display: flex;
+display: none;
 height: 100%;
 justify-content: space-around;
 align-items: center;
-width: 100vw;
+width: 70vw;
 flex-wrap: wrap;
 
 @media(orientation: portrait) {
     width: 100%;
-    justify-content: space-space-around;
     flex-direction: column;
     align-items: center;
   }
@@ -59,6 +57,11 @@ export const BtnTamanho = styled.button`
         width: 80px;
         height: 80px;
         font-size: 1rem;
+  }
+  @media (min-width: 1000px){
+        width: 150px;
+        height: 150px;
+        font-size: 1.5rem;
   }
 
 `

@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const Container = styled.div`
-    display: flex;
+    display: none;
     width: max-content;
     position: absolute;
     right: 17%;

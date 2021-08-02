@@ -17,7 +17,7 @@ const PainelEntradaCliente = () => {
     const { display, setdisplay } = useContext(displayContext)
 
     return (
-        <Container style={{ display: display }}>
+        <Container style={{ display: display.displayCliente }}>
             {/* mesmo que setdisplay((previousState)=>{return previousState}) */}
             <TextTitulo>Cliente</TextTitulo>
             <TextSubtitulo>Entre com seus dados</TextSubtitulo>
@@ -26,7 +26,7 @@ const PainelEntradaCliente = () => {
                 <TextNome>Nome</TextNome>
                 <InputNome />
 
-                <TextNumero>Numero {display}</TextNumero>
+                <TextNumero>Numero</TextNumero>
                 <InputNumero maxLength='11' />
             </div>
 
@@ -34,7 +34,16 @@ const PainelEntradaCliente = () => {
                 <BtnPedir onClick={() => {
                     setdisplay({
                         type: 'ESCONDER_DISPLAY_ENTRADA_CLIENTE',
-                        payload: 'none'
+                        payload: 'none',
+                    }
+                    )
+                    setdisplay({
+                        type: 'MOSTRAR_DISPLAY_PEDIDO',
+                        payload: 'flex'
+                    })
+                    setdisplay({
+                        type: 'MOSTRAR_DISPLAY_RECHEIO',
+                        payload: 'flex'
                     })
                 }}>
                     FAZER PEDIDO

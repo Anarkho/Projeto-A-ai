@@ -1,4 +1,5 @@
-import React from 'react'
+import { useContext } from 'react'
+import { displayContext } from '../../App'
 
 import { Container } from './styles.js'
 import BotaoAvancar from '../../components/Pedido/botoesDeDirecao/avançar'
@@ -13,8 +14,10 @@ import BotaoFinalizar from '../../components/Pedido/botoesStatusPedido/finalizar
 
 const MenuPedido = () => {
 
+    const {display} = useContext(displayContext)
+
     return (
-        <Container style={{display: 'none'}}>
+        <Container style={{display: display.displayPedido}}>
             <Cabecalho/>
             <PainelRecheio/>
             <PainelTamanho/>

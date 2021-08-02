@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useContext, useState } from 'react'
+import { displayContext } from '../../../../App'
 import {http} from '../../../../services/api'
 
 import {
@@ -22,12 +23,13 @@ const ModalFinalizado = () => {
     const [tamanho, setTamanho] = useState('')
     const [cobertura, setCobertura] = useState('')
     const [preco, setPreco] = useState('')
-    const [displayModal, setdisplayModal] = useState('none')
+
+    const { display, setdisplay } = useContext(displayContext)
 
 
     useEffect(() => {
-       //listar() 
-    })
+       listar() 
+    },[])
 
     function listar(){
             http.get('/clientes').then(response => {
@@ -39,13 +41,19 @@ const ModalFinalizado = () => {
                 setTamanho(pedido.tamanho)
                 setCobertura(pedido.cobertura)
                 setPreco(pedido.preco)
-    
-                setdisplayModal('flex')
             })
+
+            setInterval(() => {
+                setdisplay({
+                    type: 'ESCONDER_DISPLAY_MODAL',
+                    payload: 'none'
+                })
+               }, 5000);
+               console.log('ok baby')
     }
     
     return (
-        <Container style={{ display: displayModal }} className='container'>
+        <Container style={{ display: display.displayM }} className='container'>
             <span>
                 <h1>Pedido Finalizado</h1>
                 <ImgCheck src='https://i.ibb.co/N6QVFtx/check.png' alt='check' />
