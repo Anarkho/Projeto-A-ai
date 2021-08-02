@@ -1,5 +1,5 @@
 import React, { useEffect, useContext, useState } from 'react'
-import { displayContext } from '../../../../App'
+import { displayContext, subtituloContext } from '../../../../App'
 import { http } from '../../../../services/api'
 
 import {
@@ -26,6 +26,7 @@ const ModalFinalizado = () => {
     const [preco, setPreco] = useState('')
 
     const { display, setdisplay } = useContext(displayContext)
+    const { setsubtitulo } = useContext(subtituloContext)
 
 
     useEffect(() => {
@@ -48,7 +49,7 @@ const ModalFinalizado = () => {
     return (
         <Container style={{ display: display.displayM }} className='container'>
             <span>
-                <h1 style={{margin: 0}}>Pedido Finalizado</h1>
+                <h1 style={{ margin: 0 }}>Pedido Finalizado</h1>
                 <ImgCheck src='https://i.ibb.co/N6QVFtx/check.png' alt='check' />
             </span>
             <TextCliente><b>Nome do cliente:</b> {nome} </TextCliente>
@@ -61,16 +62,20 @@ const ModalFinalizado = () => {
             <TextPreco>Total a pagar: {preco} </TextPreco>
 
             <BtnFechar
-            onClick={()=>{
-                setdisplay({
-                    type: 'ESCONDER_DISPLAY_MODAL',
-                    payload: 'none'
-                })
-                setdisplay({
-                    type: 'MOSTRAR_DISPLAY_CLIENTE',
-                    payload: 'flex'
-                })
-            }}>
+                onClick={() => {
+                    setdisplay({
+                        type: 'ESCONDER_DISPLAY_MODAL',
+                        payload: 'none'
+                    })
+                    setdisplay({
+                        type: 'MOSTRAR_DISPLAY_CLIENTE',
+                        payload: 'flex'
+                    })
+                    setsubtitulo({
+                        type: 'ALTERAR_SUBTITULO_RECHEIO',
+                        payload: 'Qual o recheio do seu açai?'
+                    })
+                }}>
                 FECHAR
             </BtnFechar>
 

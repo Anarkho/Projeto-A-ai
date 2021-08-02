@@ -34,9 +34,8 @@ function App() {
         <MenuCliente />
         <subtituloContext.Provider value={{ subtitulo, setsubtitulo }}>
         <MenuPedido />
+        <ModalFinalizado/>
         </subtituloContext.Provider>
-        <ModalFinalizado />
-
       </displayContext.Provider>
     </div>
   );
