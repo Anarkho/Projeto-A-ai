@@ -1,10 +1,15 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { subtituloContext } from '../../../App'
 import { Container, Titulo, Escolha } from './styles'
+
 const Cabecalho = () => {
+
+    const{subtitulo} = useContext(subtituloContext)
+
     return(
         <Container>
             <Titulo>Faça seu pedido!</Titulo>
-            <Escolha>Qual recheio você quer no seu açai?</Escolha>
+            <Escolha>{subtitulo.titulo}</Escolha> 
         </Container>
     )
 }
