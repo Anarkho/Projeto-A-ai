@@ -48,7 +48,7 @@ const ModalFinalizado = () => {
     return (
         <Container style={{ display: display.displayM }} className='container'>
             <span>
-                <h1>Pedido Finalizado</h1>
+                <h1 style={{margin: 0}}>Pedido Finalizado</h1>
                 <ImgCheck src='https://i.ibb.co/N6QVFtx/check.png' alt='check' />
             </span>
             <TextCliente><b>Nome do cliente:</b> {nome} </TextCliente>
