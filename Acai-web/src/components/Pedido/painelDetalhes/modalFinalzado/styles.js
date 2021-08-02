@@ -32,4 +32,19 @@ export const ImgCheck = styled.img`
     width: 60px;
     margin-bottom: 35px;
 `
+export const BtnFechar = styled.button`
+   margin-top: 15px;
+   color: black;
+   font-weight: bold;
+   background-color: coral;
+   border-radius: 5px;
+   border: none;
+   padding: 5px;
+
+   :active{
+       background-color: black;
+       color: white;
+   }
+
+`
 

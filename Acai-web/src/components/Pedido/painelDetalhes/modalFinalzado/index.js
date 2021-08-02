@@ -1,6 +1,6 @@
 import React, { useEffect, useContext, useState } from 'react'
 import { displayContext } from '../../../../App'
-import {http} from '../../../../services/api'
+import { http } from '../../../../services/api'
 
 import {
     Container,
@@ -10,7 +10,8 @@ import {
     TextRecheio,
     TextPreco,
     TextTamanho,
-    ImgCheck
+    ImgCheck,
+    BtnFechar
 } from './styles'
 
 
@@ -28,30 +29,22 @@ const ModalFinalizado = () => {
 
 
     useEffect(() => {
-       listar() 
-    },[])
+        listar()
+    }, [Container])
 
-    function listar(){
-            http.get('/clientes').then(response => {
-                resposta = response.data[0]
-                setNome(resposta.nome)
-                setTelefone(resposta.telefone)
-                const pedido = resposta.pedidos[0]
-                setRecheio(pedido.recheio)
-                setTamanho(pedido.tamanho)
-                setCobertura(pedido.cobertura)
-                setPreco(pedido.preco)
-            })
-
-            setInterval(() => {
-                setdisplay({
-                    type: 'ESCONDER_DISPLAY_MODAL',
-                    payload: 'none'
-                })
-               }, 5000);
-               console.log('ok baby')
+    function listar() {
+        http.get('/clientes').then(response => {
+            resposta = response.data[0]
+            setNome(resposta.nome)
+            setTelefone(resposta.telefone)
+            const pedido = resposta.pedidos[0]
+            setRecheio(pedido.recheio)
+            setTamanho(pedido.tamanho)
+            setCobertura(pedido.cobertura)
+            setPreco(pedido.preco)
+        })
     }
-    
+
     return (
         <Container style={{ display: display.displayM }} className='container'>
             <span>
@@ -66,6 +59,20 @@ const ModalFinalizado = () => {
             <TextCobertura><b>Cobertura escolhida:</b> {cobertura}</TextCobertura>
 
             <TextPreco>Total a pagar: {preco} </TextPreco>
+
+            <BtnFechar
+            onClick={()=>{
+                setdisplay({
+                    type: 'ESCONDER_DISPLAY_MODAL',
+                    payload: 'none'
+                })
+                setdisplay({
+                    type: 'MOSTRAR_DISPLAY_CLIENTE',
+                    payload: 'flex'
+                })
+            }}>
+                FECHAR
+            </BtnFechar>
 
         </Container>
     )
