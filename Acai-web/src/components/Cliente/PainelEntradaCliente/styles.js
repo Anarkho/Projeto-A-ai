@@ -66,10 +66,10 @@ export const InputNumero = styled.input`
     }
 `
 export const ContainerButton = styled.div`
-    height: 100vh;
     display: flex;
-    align-items: flex-end;
-
+    position: relative;
+    margin-left: 5%;
+    margin-top: 10px;
 `
 export const BtnPedir = styled.button`
     height: max-content;

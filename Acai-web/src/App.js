@@ -11,8 +11,8 @@ export const displayContext = createContext()
 export const subtituloContext = createContext()
 
 function App() {
-
-  const init = {
+  //////////////////////////////////////////////////////////////////////////
+  const initDisplay = {
     displayCliente: 'none',
     displayPedido: 'none',
     displayR: 'none',
@@ -22,19 +22,18 @@ function App() {
     displayBD: 'none',
     displayBS: 'none'
   }
-  const [display, setdisplay] = useReducer(displayReducer, init)
-
-  const inicio = {titulo: 'Qual o recheio você quer no seu açai?'}
+  const [display, setdisplay] = useReducer(displayReducer, initDisplay)
+  ///////////////////////////////////////////////////////////////////////////
+  const inicio = { titulo: 'Qual o recheio você quer no seu açai?' }
   const [subtitulo, setsubtitulo] = useReducer(subtituloReducer, inicio)
-
+ 
   return (
     <div className="App">
       <displayContext.Provider value={{ display, setdisplay }}>
-
         <MenuCliente />
         <subtituloContext.Provider value={{ subtitulo, setsubtitulo }}>
-        <MenuPedido />
-        <ModalFinalizado/>
+            <MenuPedido />
+          <ModalFinalizado />
         </subtituloContext.Provider>
       </displayContext.Provider>
     </div>

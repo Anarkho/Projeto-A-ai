@@ -20,5 +20,6 @@ export const Container = styled.div`
     @media(orientation: portrait){
         margin: 0;
         width: 90%;
+        height: 50%;
     }
 `

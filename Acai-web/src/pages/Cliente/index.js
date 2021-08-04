@@ -4,6 +4,7 @@ import { Container } from './styles'
 import { displayContext } from '../../App'
 
 const MenuCliente = () => {
+    
     const { display, setdisplay } = useContext(displayContext) // extracão da propriedade do objeto
 
     useEffect(() => {
